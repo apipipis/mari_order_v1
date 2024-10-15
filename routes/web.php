@@ -11,17 +11,20 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/home', function () {
-    return view('home');
-});
 Route::get('/login', function () {
     return view('login');
 });
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/dpenjual', function () {
+Route::get('/home', function () {
     return view('dpenjual');
+});
+Route::get('/toko', function () {
+    return view('dpembeli');
+});
+Route::get('/toko/produk', function () {
+    return view('produk');
 });
 Route::get('/dpenjual/barang', function () {
     return view('products/brgpenjual', compact('products'));
