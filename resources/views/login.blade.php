@@ -32,9 +32,22 @@
     </style>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center"
-    style="background-image: url('{{ asset('img/bgawal.png') }}'); background-size: cover; background-position: center;">
-
+<body class="bg-gray-100 min-h-screen flex items-center justify-center" style="background-image: url('{{ asset('img/bgawal.png') }}'); background-size: cover; background-position: center;">
+    <nav class= "fixed top-0 left-0 right-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/"><img src="img/logo.png" width="250" height="250"></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/login"
+                        class="bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded-full">Masuk</a>
+                    <a href="/register"
+                        class="bg-orange-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded-full">Daftar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="custom-blue p-8 rounded-lg shadow-lg w-full max-w-lg">
         <h2 class="text-3xl font-bold mb-6 text-center text-white">Login</h2>
         <form method="POST" action="/login">
